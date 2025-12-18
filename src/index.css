@@ -1,0 +1,21 @@
+:root {
+  --cor-primaria: #C1BBAA; /* Bege acinzentado */
+  --cor-fundo: #EFEDE5;    /* Off-white */
+  --cor-texto: #222222;    /* Grafite escuro */
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #a8a293;
+}
