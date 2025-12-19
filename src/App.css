@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -47,4 +49,20 @@
 
 .nav-link:hover {
   color: #555; /* tom mais suave ao passar o mouse */
+}
+
+.carousel-img {
+  animation: zoomInOut 10s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* zoom leve */
+  }
+  100% {
+    transform: scale(1);
+  }
 }

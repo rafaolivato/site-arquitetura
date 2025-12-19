@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container, Carousel, Row, Col, Card } from 'react-bootstrap';
 import logoVertical from './assets/logoVertical.png';
+import logobase from './assets/logobase.png'
 
 const App: React.FC = () => {
   return (
@@ -10,10 +11,10 @@ const App: React.FC = () => {
         <Container fluid style={{ maxWidth: '1400px' }}>
           <Navbar.Brand href="#home">
             <img
-              src={logoVertical}
+              src={logobase}
               alt="Logo Arquitetura"
               className="d-inline-block align-top"
-              style={{ height: '200px' }}
+              style={{ height: '75px' }}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -28,11 +29,10 @@ const App: React.FC = () => {
         </Container>
       </Navbar>
 
-      {/* 2. BANNER (CAROUSEL) */}
       <Carousel id="home" fade interval={5000}>
         <Carousel.Item style={{ height: '80vh' }}>
           <img
-            className="d-block w-100 h-100"
+            className="d-block w-100 h-100 carousel-img"
             style={{ objectFit: 'cover' }}
             src="https://carolcustodioarquitetura.com.br/wp-content/uploads/2020/09/Fachada__1-Photo.jpg"
             alt="Fachada"
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         </Carousel.Item>
         <Carousel.Item style={{ height: '80vh' }}>
           <img
-            className="d-block w-100 h-100"
+            className="d-block w-100 h-100 carousel-img"
             style={{ objectFit: 'cover' }}
             src="https://carolcustodioarquitetura.com.br/wp-content/uploads/2020/09/04.jpg"
             alt="Interior"
@@ -52,18 +52,31 @@ const App: React.FC = () => {
       <Container id="sobre" className="py-5">
         <Row className="align-items-center">
           <Col md={6}>
-            <h2 style={{ borderLeft: '5px solid #C1BBAA', paddingLeft: '15px' }}>Sobre a Empresa</h2>
-            <p className="mt-4">
-              Com sede em Cordeirópolis, nossa empresa une a precisão da engenharia com a estética da arquitetura.
-              Buscamos transformar sonhos em espaços funcionais e inspiradores.
+            <h2 style={{ borderLeft: "5px solid #C1BBAA", paddingLeft: "15px" }}>
+              Sobre a Empresa
+            </h2>
+
+            <p style={{ textAlign: "justify" }}>
+              <strong>Transformamos ideias em experiências únicas.</strong> Com sede em Cordeirópolis, nossa empresa nasce da união entre gerações: pai e filha que compartilham a paixão por criar espaços que unem a precisão da engenharia com a sensibilidade da arquitetura. Mais do que projetos, entregamos soluções completas que traduzem sonhos em ambientes funcionais, sofisticados e inspiradores.
+            </p>
+
+            <p style={{ textAlign: "justify" }}>
+              Cada detalhe é pensado para valorizar a estética, otimizar recursos e garantir excelência técnica. Atuamos em projetos residenciais, comerciais e corporativos, sempre com foco em inovação, sustentabilidade e personalização. Nosso compromisso é oferecer não apenas construções, mas experiências que refletem identidade, propósito e estilo de vida.
+            </p>
+
+            <p style={{ textAlign: "justify" }}>
+              Seja para erguer uma obra do zero ou repaginar espaços já existentes, estamos prontos para transformar desafios em conquistas e ideias em realidade.<strong>Arquitetura e engenharia lado a lado, tradição e modernidade em perfeita harmonia.</strong>
             </p>
           </Col>
+
           <Col md={6}>
             <img
-              src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=800"
-              alt="Sobre"
+              src={logoVertical}
+              alt="logoVertical"
               className="img-fluid rounded shadow"
+              style={{ height: '600px' }}
             />
+
           </Col>
         </Row>
       </Container>
