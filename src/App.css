@@ -52,7 +52,7 @@
 }
 
 .carousel-img {
-  animation: zoomInOut 10s ease-in-out infinite;
+  animation: zoomInOut 10s ease-in-out infinite !important;
 }
 
 @keyframes zoomInOut {
@@ -65,4 +65,57 @@
   100% {
     transform: scale(1);
   }
+}
+.transition-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+  color: white;
+}
+
+/* Opcional: Animação de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Triângulo do balão de fala */
+.whatsapp-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  display: block;
+  width: 0;
+}
+
+/* Animação para o balão flutuar levemente */
+.whatsapp-tooltip {
+  animation: floatAnim 3s infinite ease-in-out;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
