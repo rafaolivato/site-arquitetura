@@ -175,7 +175,7 @@ const App: React.FC = () => {
               <h5 className="mb-3" style={{ color: '#C1BBAA', fontWeight: 'bold' }}>Informações de Contato</h5>
               <p className="mb-2 d-flex align-items-center">
                 <FaPhoneAlt className="me-2" style={{ color: '#C1BBAA' }} />
-                (19) 3546-XXXX
+                (19) 3546-16 20
               </p>
               <p className="d-flex align-items-center">
                 <FaEnvelope className="me-2" style={{ color: '#C1BBAA' }} />
